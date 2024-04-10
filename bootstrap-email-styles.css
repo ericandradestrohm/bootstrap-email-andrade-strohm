@@ -2,6 +2,7 @@
     min-height: 100vh;
     /* border: 5px solid red; */
     min-width: 100px;
+    background-color: bisque;
 }
 /* Section for top border where "inbox" is */
 .top-border{
