@@ -6,8 +6,7 @@
 }
 /* Section for top border where "inbox" is */
 .top-border{
-    height: 10vh;
-    font-size: 32px;
+    height: 7vh;
     border-bottom: 3px solid black;
 }
 #mail-name{
@@ -15,7 +14,7 @@
     text-decoration:none;
 }
 #settings-button {
-    /* Placeholder settings */
+    text-decoration: underline;
 }
 
 /* Section for navigation menu for folders */
