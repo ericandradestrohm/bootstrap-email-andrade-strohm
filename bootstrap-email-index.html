@@ -28,6 +28,7 @@
                                 </div>
                                 <div class="offcanvas-body">
                                     <ul class="folder-group d-flex flex-column">
+                                        <button type="button" class="btn btn-primary" id="compose-button">Compose</button>
                                         <li class="folder-group-item d-flex justify-content-between align-items-center">
                                             <a href="#" class="folder-link">Inbox</a>
                                             <span class="badge text-bg-primary rounded-pill">14</span>
@@ -65,7 +66,7 @@
                     <!-- Search menu -->
                     <!-- <button class="btn btn-outline-secondary" type="button" id="toggle-search">Search</button> -->
                     <form class="d-flex d-none d-lg-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <!-- Settings Button -->
@@ -77,6 +78,7 @@
             <nav class="navbar navbar-expand-md d-none d-md-block col-md-3 col-xl-2 folders" id="folder-navbar">
                 <div class="container-fluid">
                     <ul class="folder-group d-flex flex-column">
+                        <button type="button" class="btn btn-primary" id="compose-button">Compose</button>
                         <li class="folder-group-item d-flex justify-content-between align-items-center">
                             <a href="#" class="folder-link">Inbox</a>
                             <span class="badge text-bg-primary rounded-pill">14</span>
@@ -193,14 +195,17 @@
 
 
             </div>
-            <!-- Message Preview below.
-            Need to add reply and forward buttons -->
-            <div class="d-none d-xl-block col-xl-6 message-preview ">
+            <!-- Message Preview below.-->
+            <div class="d-flex justify-content-center align-items-center flex-column d-none d-xl-block col-xl-6 message-preview ">
                 <div class="message-header">
-                    <h2 id="from-who">From: Microsoft</h3>
-                    <h3 id="to-who">To: eric@email.com</h4>
+                    <h2 id="from-who">From: Microsoft</h2>
+                    <h3 id="to-who">To: eric@email.com</h3>
                 </div>
-                <p>Lorem ipsum dolor sit amet. At harum omnis et molestiae exercitationem est sint iste. Cum omnis vitae nam suscipit quas aut ipsa voluptatem! Quo reiciendis repellendus sed magni consequatur qui magnam soluta sed enim obcaecati. </p><p>Ea aliquam saepe qui libero ducimus et vero quia. Nam sapiente temporibus hic voluptas exercitationem sit incidunt porro et possimus adipisci At similique sequi ut magnam corporis. Quo recusandae nobis qui atque iste At nemo doloribus At inventore consequatur sit nulla tenetur in mollitia unde in dignissimos molestiae. In itaque facilis non voluptatum illum ut ullam maxime qui voluptates aspernatur. </p><p>Et expedita odit sit impedit numquam eos nemo exercitationem quo obcaecati enim. Et reprehenderit saepe aut esse ipsum sed fuga tempore ea architecto enim non aliquid doloribus ut reiciendis repudiandae id quas necessitatibus. Eum dolor illum eum itaque unde et temporibus saepe rem odit dolorem ab culpa nisi ex omnis commodi et velit vero. Quo fugiat numquam non rerum consequuntur aut nihil consequatur. </p>
+                <div class="message-content">
+                    <p>Lorem ipsum dolor sit amet. At harum omnis et molestiae exercitationem est sint iste. Cum omnis vitae nam suscipit quas aut ipsa voluptatem! Quo reiciendis repellendus sed magni consequatur qui magnam soluta sed enim obcaecati. </p>
+                    <p>Ea aliquam saepe qui libero ducimus et vero quia. Nam sapiente temporibus hic voluptas exercitationem sit incidunt porro et possimus adipisci At similique sequi ut magnam corporis. Quo recusandae nobis qui atque iste At nemo doloribus At inventore consequatur sit nulla tenetur in mollitia unde in dignissimos molestiae. In itaque facilis non voluptatum illum ut ullam maxime qui voluptates aspernatur. </p>
+                    <p>Et expedita odit sit impedit numquam eos nemo exercitationem quo obcaecati enim. Et reprehenderit saepe aut esse ipsum sed fuga tempore ea architecto enim non aliquid doloribus ut reiciendis repudiandae id quas necessitatibus. Eum dolor illum eum itaque unde et temporibus saepe rem odit dolorem ab culpa nisi ex omnis commodi et velit vero. Quo fugiat numquam non rerum consequuntur aut nihil consequatur. </p>
+                </div>
                 <div class="reply-compose" role="group" >
                     <button type="button" class="btn btn-primary">Reply</button>
                     <button type="button" class="btn btn-primary">Reply All</button>
