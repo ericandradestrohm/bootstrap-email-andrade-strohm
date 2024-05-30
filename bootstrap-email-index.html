@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <!-- Logo -->
             <a href="#" class="navbar-brand d-none d-md-block">🎆Eric-Mail🎆</a>
-            <!-- Hidden navbar. Not sure how to make original navbar snap to top -->
+            <!-- Hidden offcanvas side navbar. Appears only when small -->
             <nav class="navbar navbar-expand-md d-md-none folders no-border" id="topbar-folder-navbar">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -30,6 +30,7 @@
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
+                        <!-- List of folders for offcanvas -->
                         <div class="offcanvas-body">
                             <ul class="folder-group d-flex flex-column" id="folder-list">
                                 <li class="folder-group-item d-flex justify-content-between align-items-center ">
@@ -54,11 +55,18 @@
                                     <a href="#" class="folder-link">Trash</a>
                                 </li>
                             </ul>
+                            <!-- Search menu -->
+                            <form class="d-flex my-2" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+
                             <!-- Button for compose modal -->
                             <button type="button" class="btn btn-primary" id="compose-button" data-bs-toggle="modal"
                                 data-bs-target="#composeTextMessage">
                                 Compose
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -193,30 +201,20 @@
                 <div class="email black-border">
                     <h3>This is an email</h3>
                 </div>
-
-
             </div>
             <!-- Message Preview below.-->
-            <div
-                class="d-flex justify-content-center align-items-center flex-column d-none d-xl-block col-xl-6 message-preview ">
+            <div class="d-flex justify-content-center align-items-center flex-column d-none d-xl-block col-xl-6 message-preview ">
                 <div class="message-header">
-                    <h2 id="from-who">From: Microsoft</h2>
+                    <h2 id="from-who">From: microsoft</h2>
                     <h3 id="to-who">To: eric@email.com</h3>
                 </div>
                 <div class="message-content">
-                    <p>Lorem ipsum dolor sit amet. At harum omnis et molestiae exercitationem est sint iste. Cum omnis
-                        vitae nam suscipit quas aut ipsa voluptatem! Quo reiciendis repellendus sed magni consequatur
-                        qui magnam soluta sed enim obcaecati. </p>
-                    <p>Ea aliquam saepe qui libero ducimus et vero quia. Nam sapiente temporibus hic voluptas
-                        exercitationem sit incidunt porro et possimus adipisci At similique sequi ut magnam corporis.
-                        Quo recusandae nobis qui atque iste At nemo doloribus At inventore consequatur sit nulla tenetur
-                        in mollitia unde in dignissimos molestiae. In itaque facilis non voluptatum illum ut ullam
-                        maxime qui voluptates aspernatur. </p>
-                    <p>Et expedita odit sit impedit numquam eos nemo exercitationem quo obcaecati enim. Et reprehenderit
-                        saepe aut esse ipsum sed fuga tempore ea architecto enim non aliquid doloribus ut reiciendis
-                        repudiandae id quas necessitatibus. Eum dolor illum eum itaque unde et temporibus saepe rem odit
-                        dolorem ab culpa nisi ex omnis commodi et velit vero. Quo fugiat numquam non rerum consequuntur
-                        aut nihil consequatur. </p>
+                    <p><strong>Attention!!</strong></p>
+                    <p>Your microsoft account has <em>compromised!</em></p>
+                    <p>Need to reset password for attackers.</p>
+                    <p>click link to reset password</p>
+                    <a href="https://support.microsoft.com/en-us/windows/protect-yourself-from-phishing-0c7ea947-ba98-3bd9-7184-430e1f860a44"class="btn btn-danger">Reset Password</a>
+                    <p>click button to reset</p>
                 </div>
                 <label for="reply-text-box">Please write your message below:</label>
                 <textarea name="reply-text-box" id="reply-text-box" class="w-100" rows="10"></textarea>
