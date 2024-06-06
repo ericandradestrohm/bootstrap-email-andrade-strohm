@@ -20,55 +20,10 @@
             <nav class="navbar navbar-expand-md d-md-none folders no-border" id="topbar-folder-navbar">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#folderOffcanvas" aria-controls="folderOffcanvas">
+                        data-bs-target="#folderOffCanvas" aria-controls="folderOffCanvas">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="folderOffcanvas"
-                        aria-labelledby="folderOffcanvasLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="folderOffcanvasLabel">Folders</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <!-- List of folders for offcanvas -->
-                        <div class="offcanvas-body">
-                            <ul class="folder-group d-flex flex-column" id="folder-list">
-                                <li class="folder-group-item d-flex justify-content-between align-items-center ">
-                                    <a href="#" class="folder-link">Inbox</a>
-                                    <span class="badge text-bg-primary rounded-pill">14</span>
-                                </li>
-                                <li class="folder-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="folder-link">Unread</a>
-                                    <span class="badge text-bg-primary rounded-pill">2</span>
-                                </li>
-                                <li class="folder-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="folder-link">Send</a>
-                                </li>
-                                <li class="folder-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="folder-link">Unread</a>
-                                    <span class="badge text-bg-primary rounded-pill">3</span>
-                                </li>
-                                <li class="folder-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="folder-link">Spam</a>
-                                </li>
-                                <li class="folder-group-item d-flex justify-content-between align-items-center">
-                                    <a href="#" class="folder-link">Trash</a>
-                                </li>
-                            </ul>
-                            <!-- Search menu -->
-                            <form class="d-flex my-2" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-
-                            <!-- Button for compose modal -->
-                            <button type="button" class="btn btn-primary" id="compose-button" data-bs-toggle="modal"
-                                data-bs-target="#composeTextMessage">
-                                Compose
-                            </button>
-
-                        </div>
-                    </div>
+                    <!-- was here -->
                 </div>
             </nav>
 
@@ -83,41 +38,56 @@
             <button type="button" id="settings-button" class="btn">Settings</button>
         </div>
     </nav>
+
+
     <!-- Main container -->
     <div class="container-fluid">
         <div class="row my-row">
-            <!-- Sidebar for folders -->
-            <div class="d-none d-md-block col-md-3 col-xl-2 folders" id="folders">
-                <h2 class="header d-flex justify-content-center">Folders</h2>
-                <ul class="folder-group d-flex flex-column" id="folder-list">
-                    <li class="folder-group-item d-flex justify-content-between align-items-center ">
-                        <a href="#" class="folder-link">Inbox</a>
-                        <span class="badge text-bg-primary rounded-pill">14</span>
-                    </li>
-                    <li class="folder-group-item d-flex justify-content-between align-items-center">
-                        <a href="#" class="folder-link">Unread</a>
-                        <span class="badge text-bg-primary rounded-pill">2</span>
-                    </li>
-                    <li class="folder-group-item d-flex justify-content-between align-items-center">
-                        <a href="#" class="folder-link">Send</a>
-                    </li>
-                    <li class="folder-group-item d-flex justify-content-between align-items-center">
-                        <a href="#" class="folder-link">Unread</a>
-                        <span class="badge text-bg-primary rounded-pill">3</span>
-                    </li>
-                    <li class="folder-group-item d-flex justify-content-between align-items-center">
-                        <a href="#" class="folder-link">Spam</a>
-                    </li>
-                    <li class="folder-group-item d-flex justify-content-between align-items-center">
-                        <a href="#" class="folder-link">Trash</a>
-                    </li>
-                </ul>
-                <!-- Button for compose modal -->
-                <button type="button" class="btn btn-primary" id="compose-button" data-bs-toggle="modal"
-                    data-bs-target="#composeTextMessage">
-                    Compose
-                </button>
+            
+            <!-- Sidebar offcanvas for folders -->
+            <!-- Was able to get this working by having the offcanvas button be hidden at small sizes, and declaring the offcanvas here -->
+            <div class="offcanvas-md offcanvas-start d-md-block col-md-3 col-xl-2 folders" tabindex="-1" id="folderOffCanvas" aria-labelledby="folderOffCanvasLabel">
+                <div class="offcanvas-header justify-content-between">
+                    <h5 class="offcanvas-title" id="folderOffCanvasLabel">Folders</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#folderOffCanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body flex-column">
+                    <h2 class="header d-flex justify-content-center d-none d-md-flex">Folders</h2>
+                    <ul class="folder-group d-flex flex-column" id="folder-list">
+                        <li class="folder-group-item d-flex justify-content-between align-items-center ">
+                            <a href="#" class="folder-link">Inbox</a>
+                            <span class="badge text-bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="folder-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="folder-link">Unread</a>
+                            <span class="badge text-bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="folder-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="folder-link">Send</a>
+                        </li>
+                        <li class="folder-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="folder-link">Unread</a>
+                            <span class="badge text-bg-primary rounded-pill">3</span>
+                        </li>
+                        <li class="folder-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="folder-link">Spam</a>
+                        </li>
+                        <li class="folder-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="folder-link">Trash</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex d-block d-md-none mt-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <button type="button" class="btn btn-primary" id="compose-button" data-bs-toggle="modal" data-bs-target="#composeTextMessage">
+                        Compose
+                    </button>
+                </div>
             </div>
+
+
+
             <!-- Below is list of emails. -->
             <div class="col-md-9 col-xl-4 email-list list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action list-group-item-primary active">
