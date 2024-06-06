@@ -63,26 +63,19 @@ a {
     margin: 10px;
 }
 
-/* Section for email pane */
+/* Section for list of email  */
 .email-list {
     /* border: 4px solid blue; */
     background-color: azure;
     overflow-y: auto;
     padding: 0px;
 
-    /* Starter code set manual height, and 
-    made grid grow annoyingly.
-    max-height gets rid of empty white space */
-    max-height: 100vh;
+    /* Set to make the list not too tall */
+    max-height: 93vh;
 
 }
 .email {
     padding: 20px;
-}
-.email:hover {
-    cursor: pointer;
-    background-color: lightblue;
-    transition: 1s;
 }
 
 .black-border {
