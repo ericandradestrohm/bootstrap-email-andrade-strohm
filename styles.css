@@ -2,6 +2,8 @@ body {
     min-height: 100vh;
     min-width: 100px;
     background-color: bisque;
+    /* Hides scrollbar on side */
+    overflow: hidden;
 }
 
 a {
@@ -88,6 +90,8 @@ a {
     background-color: azure;
     border-left: 2px black solid;
     padding: 10px;
+    height: 93vh;
+    overflow-y: auto;
 
     min-height: 400px;
 }
